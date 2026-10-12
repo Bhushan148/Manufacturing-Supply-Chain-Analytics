@@ -37,7 +37,7 @@ manufacturing-supply-chain-analytics/
 ├── LICENSE                         # all rights reserved (portfolio viewing only)
 ├── .gitignore
 │
-├── sql/                            # build + ETL + analysis + validation (run in order)
+├── 01_sql/                            # build + ETL + analysis + validation (run in order)
 │   ├── 01_Manufacturing_Source_Initial_Setup.sql
 │   ├── 02_Manufacturing_DW_Setup.sql          # raw/stg/mart/bi/etl schemas, star schema, SCD2
 │   ├── 03_ETL_StoredProcedures.sql            # watermark-based incremental ETL (usp_RunFullETL)
@@ -46,20 +46,20 @@ manufacturing-supply-chain-analytics/
 │   ├── 06_analysis.sql   + FINDINGS.md        # ad-hoc analyst queries
 │   └── 07_validation.sql + VALIDATION_REPORT.md   # data-quality + golden-total checks
 │
-├── powerbi/                        # lightweight .pbip pointer files only (report source withheld)
+├── 02_powerbi/                        # lightweight .pbip pointer files only (report source withheld)
 │   ├── Manufacturing_SemanticModel.pbip
 │   ├── 01_Executive_Overview.pbip
 │   ├── 02_Inventory_Procurement.pbip
 │   └── 03_Fulfillment_Logistics.pbip
 │
-├── docs/                           # how the BI layer was built
+├── 03_docs/                           # how the BI layer was built
 │   ├── MEASURES.md                 # measure catalog
 │   ├── REPORT_BLUEPRINT.md         # page-by-page report design
 │   ├── POWERQUERY_STANDARDS.md     # query folding standards
 │   ├── RLS.md                      # dynamic row-level security design
 │   └── DEPLOYMENT_CHECKLIST.md     # Power BI Service deployment (workspace, gateway, refresh, RLS, App)
 │
-└── screenshots/                    # report previews (how the reports are showcased)
+└── 04_screenshots/                    # report previews (how the reports are showcased)
     ├── executive-overview.png
     ├── inventory-procurement.png
     ├── fulfillment-logistics.png
@@ -85,12 +85,12 @@ views = Power BI contract layer) → `etl` (watermark/control).
 
 - **Thin-report architecture:** one **shared semantic model** + **3 thin reports** that live-connect
   to it (7 pages). Change a measure once → every report inherits it.
-- **Query folding** against the `bi.*` views (see `docs/POWERQUERY_STANDARDS.md`).
+- **Query folding** against the `bi.*` views (see `03_docs/POWERQUERY_STANDARDS.md`).
 - **Incremental refresh** — rolling 6-year window (RangeStart/RangeEnd).
 - **Dynamic Row-Level Security** — `USERPRINCIPALNAME()` + a `SecurityWarehouseAccess` bridge table,
-  two roles (see `docs/RLS.md`).
+  two roles (see `03_docs/RLS.md`).
 
-### Headline KPIs (synthetic — from `sql/VALIDATION_REPORT.md`)
+### Headline KPIs (synthetic — from `01_sql/VALIDATION_REPORT.md`)
 
 | Metric | Value |
 |---|---|
@@ -105,13 +105,13 @@ views = Power BI contract layer) → `etl` (watermark/control).
 ## Reports (preview)
 
 ### Executive Overview
-![Executive Overview](screenshots/executive-overview.png)
+![Executive Overview](04_screenshots/executive-overview.png)
 
 ### Inventory & Procurement
-![Inventory & Procurement](screenshots/inventory-procurement.png)
+![Inventory & Procurement](04_screenshots/inventory-procurement.png)
 
 ### Fulfillment & Logistics
-![Fulfillment & Logistics](screenshots/fulfillment-logistics.png)
+![Fulfillment & Logistics](04_screenshots/fulfillment-logistics.png)
 
 ### Data Model (star schema)
 
