@@ -1,0 +1,22 @@
+# ── Power BI report & model SOURCE — never publish (only .pbip pointer files are tracked) ──
+**/*.Report/
+**/*.SemanticModel/
+**/.pbi/
+*.pbix
+*.pbit
+
+# ── Secrets ──
+.env
+*.env
+!*.env.example
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+
+# ── Editors / OS ──
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store

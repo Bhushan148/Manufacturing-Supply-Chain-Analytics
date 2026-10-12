@@ -1,0 +1,20 @@
+Copyright (c) 2026 Bhushan. All Rights Reserved.
+
+This repository is published for PORTFOLIO and DEMONSTRATION purposes only.
+
+You MAY:
+  - View and read the code, SQL, and documentation in this repository.
+  - Reference it when evaluating the author's work (e.g., for hiring).
+
+You MAY NOT, without the author's prior written permission:
+  - Copy, reproduce, redistribute, or republish any part of this repository.
+  - Use the code, SQL, data model, Power BI design, or documentation
+    (in whole or in part) in any project, product, or service.
+  - Create derivative works based on this repository.
+
+The Power BI report and semantic model source files are intentionally NOT
+included in this public repository (only lightweight .pbip pointer files are
+present). All data is synthetic and fictional.
+
+No license (open-source or otherwise) is granted. All rights are reserved by
+the author. For any use beyond viewing, contact the author for permission.
