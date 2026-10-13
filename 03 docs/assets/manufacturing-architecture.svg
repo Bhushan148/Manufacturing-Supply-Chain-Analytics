@@ -1,89 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1640 1440" width="1640" height="1440" role="img" aria-labelledby="title desc" font-family="DejaVu Sans, Arial, sans-serif">
-<title id="title">Manufacturing and Supply Chain Analytics — Solution Architecture</title>
-<desc id="desc">End-to-end process flow: Python synthetic data generation, operational OLTP source, SQL Server raw, stg, mart and bi schemas, Power Query, the shared Power BI semantic model, and three thin reports. SQL Agent ETL controls and validation are connected as supporting processes.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1860" height="1800" viewBox="0 0 1860 1800" role="img" aria-labelledby="title desc" font-family="DejaVu Sans, Arial, sans-serif">
+<title id="title">Manufacturing and Supply Chain Analytics — Solution Architecture Flowchart</title>
+<desc id="desc">Python Source Simulator to Manufacturing Source OLTP, SQL raw, stg, mart and bi layers, Power Query and OLAP shared Power BI semantic model, three thin reports, Power BI Service, Power BI App, and business users. Side flows for SQL Server Agent ETL, validation and on-premises gateway.</desc>
 <defs>
- <pattern id="microdots" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#243345" opacity=".55"/></pattern>
- <marker id="arrowGray" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#A4B5C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
- <marker id="arrowPurple" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#BC8CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
- </defs>
-<rect x="0" y="0" width="1640" height="1440" rx="0" fill="#0D1117"/>
-<rect x="0" y="0" width="1640" height="1440" rx="0" fill="url(#microdots)"/>
-<rect x="69" y="37" width="6" height="74" rx="3" fill="#58A6FF"/>
-<text x="96" y="70" font-size="32" fill="#F0F6FC" font-weight="790" text-anchor="start">MANUFACTURING &amp; SUPPLY CHAIN ANALYTICS</text>
-<text x="97" y="101" font-size="18" fill="#AABBD0" font-weight="450" text-anchor="start">Solution architecture  /  End-to-end data flow</text>
-<rect x="1346" y="46" width="224" height="45" rx="10" fill="#151D27" stroke="#405163" stroke-width="1.5"/>
-<text x="1458" y="74" font-size="15" fill="#AABBD0" font-weight="710" text-anchor="middle">SQL SERVER → POWER BI</text>
-<path d="M69 137 H1572" fill="none" stroke="#405163" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
-<ellipse cx="820" cy="194" rx="248" ry="40" fill="#15351F" stroke="#3FB950" stroke-width="2.3"/>
-<text x="820" y="202" font-size="24" fill="#F0F6FC" font-weight="760" text-anchor="middle">Python · Synthetic Data</text>
-<path d="M 820 235 V 257" fill="none" stroke="#A4B5C8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowGray)"/>
-<path d="M 557 283 L 557 351 C 557 372 1083 372 1083 351 L 1083 283" fill="#142941" stroke="#58A6FF" stroke-width="2.3"/>
-<ellipse cx="820" cy="283" rx="263" ry="15" fill="#142941" stroke="#58A6FF" stroke-width="2.3"/>
-<path d="M557 351 C557 372 1083 372 1083 351" fill="none" stroke="#58A6FF" stroke-width="2.3"/>
-<text x="820" y="336" font-size="23" fill="#F0F6FC" font-weight="750" text-anchor="middle">Operational OLTP Source</text>
-<path d="M 820 373 V 380" fill="none" stroke="#A4B5C8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowGray)"/>
-<rect x="568.0" y="393" width="504" height="78" rx="13" fill="#151D27" stroke="#405163" stroke-width="1.7"/>
-<rect x="568.0" y="393" width="7" height="78" rx="3" fill="#58A6FF"/>
-<rect x="588.0" y="412" width="43" height="40" rx="9" fill="#142941" stroke="#58A6FF" stroke-width="1.5"/>
-<text x="609.5" y="438.5" font-size="16" fill="#58A6FF" font-weight="750" text-anchor="middle">01</text>
-<text x="648.0" y="440" font-size="22" fill="#F0F6FC" font-weight="760" text-anchor="start">raw · Source Landing</text>
-<path d="M 820 471 V 483" fill="none" stroke="#A4B5C8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowGray)"/>
-<rect x="568.0" y="501" width="504" height="78" rx="13" fill="#151D27" stroke="#405163" stroke-width="1.7"/>
-<rect x="568.0" y="501" width="7" height="78" rx="3" fill="#58A6FF"/>
-<rect x="588.0" y="520" width="43" height="40" rx="9" fill="#142941" stroke="#58A6FF" stroke-width="1.5"/>
-<text x="609.5" y="546.5" font-size="16" fill="#58A6FF" font-weight="750" text-anchor="middle">02</text>
-<text x="648.0" y="548" font-size="22" fill="#F0F6FC" font-weight="760" text-anchor="start">stg · Standardization</text>
-<path d="M 820 579 V 590" fill="none" stroke="#A4B5C8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowGray)"/>
-<rect x="568.0" y="609" width="504" height="78" rx="13" fill="#151D27" stroke="#405163" stroke-width="1.7"/>
-<rect x="568.0" y="609" width="7" height="78" rx="3" fill="#56D4CB"/>
-<rect x="588.0" y="628" width="43" height="40" rx="9" fill="#123137" stroke="#56D4CB" stroke-width="1.5"/>
-<text x="609.5" y="654.5" font-size="16" fill="#56D4CB" font-weight="750" text-anchor="middle">03</text>
-<text x="648.0" y="656" font-size="22" fill="#F0F6FC" font-weight="760" text-anchor="start">mart · Dimensional Warehouse</text>
-<path d="M 820 687 V 697" fill="none" stroke="#A4B5C8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowGray)"/>
-<rect x="568.0" y="716" width="504" height="78" rx="13" fill="#151D27" stroke="#405163" stroke-width="1.7"/>
-<rect x="568.0" y="716" width="7" height="78" rx="3" fill="#56D4CB"/>
-<rect x="588.0" y="735" width="43" height="40" rx="9" fill="#123137" stroke="#56D4CB" stroke-width="1.5"/>
-<text x="609.5" y="761.5" font-size="16" fill="#56D4CB" font-weight="750" text-anchor="middle">04</text>
-<text x="648.0" y="763" font-size="22" fill="#F0F6FC" font-weight="760" text-anchor="start">bi · Reporting Views</text>
-<path d="M 820 794 V 804" fill="none" stroke="#A4B5C8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowGray)"/>
-<rect x="568.0" y="823" width="504" height="78" rx="13" fill="#151D27" stroke="#405163" stroke-width="1.7"/>
-<rect x="568.0" y="823" width="7" height="78" rx="3" fill="#BC8CFF"/>
-<rect x="588.0" y="842" width="43" height="40" rx="9" fill="#27213E" stroke="#BC8CFF" stroke-width="1.5"/>
-<text x="609.5" y="868.5" font-size="16" fill="#BC8CFF" font-weight="750" text-anchor="middle">05</text>
-<text x="648.0" y="870" font-size="22" fill="#F0F6FC" font-weight="760" text-anchor="start">Power Query</text>
-<path d="M 820 901 V 920" fill="none" stroke="#A4B5C8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowGray)"/>
-<rect x="537.5" y="939" width="565" height="90" rx="13" fill="#151D27" stroke="#405163" stroke-width="1.7"/>
-<rect x="537.5" y="939" width="7" height="90" rx="3" fill="#BC8CFF"/>
-<rect x="557.5" y="958" width="43" height="40" rx="9" fill="#27213E" stroke="#BC8CFF" stroke-width="1.5"/>
-<text x="579.0" y="984.5" font-size="16" fill="#BC8CFF" font-weight="750" text-anchor="middle">06</text>
-<text x="617.5" y="992" font-size="22" fill="#F0F6FC" font-weight="760" text-anchor="start">Shared Power BI Semantic Model</text>
-<path d="M820 1029 V1110" fill="none" stroke="#A4B5C8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M285 1110 H1355" fill="none" stroke="#A4B5C8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="820" cy="1110" r="5.5" fill="#58A6FF"/>
-<path d="M285 1110 V1158" fill="none" stroke="#A4B5C8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowGray)"/>
-<path d="M820 1110 V1158" fill="none" stroke="#A4B5C8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowGray)"/>
-<path d="M1355 1110 V1158" fill="none" stroke="#A4B5C8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowGray)"/>
-<rect x="75" y="1172" width="420" height="105" rx="13" fill="#142941" stroke="#58A6FF" stroke-width="2.3"/>
-<text x="285" y="1232" font-size="22" fill="#F0F6FC" font-weight="750" text-anchor="middle">Executive Overview</text>
-<rect x="610" y="1172" width="420" height="105" rx="13" fill="#15351F" stroke="#3FB950" stroke-width="2.3"/>
-<text x="820" y="1232" font-size="22" fill="#F0F6FC" font-weight="750" text-anchor="middle">Inventory &amp; Procurement</text>
-<rect x="1145" y="1172" width="420" height="105" rx="13" fill="#372A15" stroke="#E8B956" stroke-width="2.3"/>
-<text x="1355" y="1232" font-size="22" fill="#F0F6FC" font-weight="750" text-anchor="middle">Fulfillment &amp; Logistics</text>
-<rect x="50" y="512" width="438" height="105" rx="15" fill="#151D27" stroke="#BC8CFF" stroke-width="1.8"/>
-<rect x="69" y="533" width="7" height="62" rx="3" fill="#BC8CFF"/>
-<text x="96" y="568" font-size="21" fill="#F0F6FC" font-weight="750" text-anchor="start">SQL Agent + ETL Controls</text>
-<path d="M488 545 H526 V432 H568" fill="none" stroke="#BC8CFF" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowPurple)" stroke-dasharray="7 8"/>
-<path d="M488 580 H527 V648 H568" fill="none" stroke="#BC8CFF" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowPurple)" stroke-dasharray="7 8"/>
-<rect x="1178" y="564" width="395" height="102" rx="15" fill="#151D27" stroke="#E8B956" stroke-width="1.7"/>
-<rect x="1197" y="584" width="7" height="61" rx="3" fill="#E8B956"/>
-<text x="1224" y="616" font-size="20" fill="#F0F6FC" font-weight="735" text-anchor="start">Validation / Reconciliation</text>
-<path d="M1072 540 H1120 V595 H1178" fill="none" stroke="#E8B956" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 8"/>
-<path d="M1072 650 H1120 V633 H1178" fill="none" stroke="#E8B956" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 8"/>
-<path d="M70 1344 H1570" fill="none" stroke="#405163" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M87 1381 H146" fill="none" stroke="#A4B5C8" stroke-width="2.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowGray)"/>
-<text x="164" y="1387" font-size="15" fill="#AABBD0" font-weight="500" text-anchor="start">Data flow</text>
-<path d="M342 1381 H398" fill="none" stroke="#BC8CFF" stroke-width="2.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowPurple)" stroke-dasharray="7 7"/>
-<text x="421" y="1387" font-size="15" fill="#AABBD0" font-weight="500" text-anchor="start">ETL orchestration</text>
-<path d="M683 1381 H746" fill="none" stroke="#E8B956" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 7"/>
-<text x="766" y="1387" font-size="15" fill="#AABBD0" font-weight="500" text-anchor="start">Validation checks</text>
+  <pattern id="fine-dots" width="34" height="34" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#233041" opacity=".45"/></pattern>
+  <marker id="arrow-head" viewBox="0 0 12 12" markerWidth="11" markerHeight="11" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#90A3B6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <marker id="cyan-head" viewBox="0 0 12 12" markerWidth="11" markerHeight="11" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#54C4D6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+<rect width="1860" height="1800" fill="#0D1117"/>
+<rect width="1860" height="1800" fill="url(#fine-dots)"/>
+<path d="M930 124 V150" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M930 267 V295" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M930 380 V416" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M930 504 V540" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M930 628 V664" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M930 752 V788" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M930 876 V912" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M930 1022 V1070" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M315 1070 H1545" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="930" cy="1070" r="5" fill="#58A6FF"/>
+<path d="M315 1070 V1123" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M930 1070 V1123" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M1545 1070 V1123" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M315 1234 V1282" fill="none" stroke="#90A3B6" stroke-width="2.65" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M930 1234 V1282" fill="none" stroke="#90A3B6" stroke-width="2.65" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1545 1234 V1282" fill="none" stroke="#90A3B6" stroke-width="2.65" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M315 1282 H1545" fill="none" stroke="#90A3B6" stroke-width="2.65" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="930" cy="1282" r="5" fill="#58A6FF"/>
+<path d="M930 1282 V1344" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M930 1438 V1505" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M930 1601 V1662" fill="none" stroke="#90A3B6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-head)"/>
+<path d="M490 472 H548 V342 H621" fill="none" stroke="#B497F0" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 8"/>
+<path d="M490 498 H548 V589 H621" fill="none" stroke="#B497F0" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 8"/>
+<path d="M1239 465 H1325 V609 H1380" fill="none" stroke="#E8BA60" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 8"/>
+<path d="M1239 589 H1380" fill="none" stroke="#E8BA60" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 8"/>
+<path d="M1239 713 H1820 V1396 H1800" fill="none" stroke="#54C4D6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 9"/>
+<path d="M1360 1396 H1230" fill="none" stroke="#54C4D6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 9" marker-end="url(#cyan-head)"/>
+<ellipse cx="930" cy="80" rx="280" ry="43" fill="#143521" stroke="#3FB950" stroke-width="2.3"/>
+<text x="930" y="81" font-size="28" fill="#F0F6FC" font-weight="710" text-anchor="middle" dominant-baseline="middle">Python Source Simulator</text>
+<rect x="621" y="169" width="618" height="98" rx="18" fill="#132A42" stroke="#58A6FF" stroke-width="2.1"/>
+<text x="930" y="218" font-size="28" fill="#F0F6FC" font-weight="710" text-anchor="middle" dominant-baseline="middle">OLTP · Manufacturing_Source</text>
+<rect x="621" y="306" width="618" height="78" rx="16" fill="#151F2B" stroke="#35475B" stroke-width="1.7"/>
+<rect x="621" y="309" width="6" height="72" rx="3" fill="#58A6FF"/>
+<text x="930.0" y="345.0" font-size="28" fill="#F0F6FC" font-weight="680" text-anchor="middle" dominant-baseline="middle">raw · Source Landing</text>
+<rect x="621" y="430" width="618" height="78" rx="16" fill="#151F2B" stroke="#35475B" stroke-width="1.7"/>
+<rect x="621" y="433" width="6" height="72" rx="3" fill="#58A6FF"/>
+<text x="930.0" y="469.0" font-size="28" fill="#F0F6FC" font-weight="680" text-anchor="middle" dominant-baseline="middle">stg · Standardization</text>
+<rect x="621" y="554" width="618" height="78" rx="16" fill="#151F2B" stroke="#35475B" stroke-width="1.7"/>
+<rect x="621" y="557" width="6" height="72" rx="3" fill="#56D4CB"/>
+<text x="930.0" y="593.0" font-size="27" fill="#F0F6FC" font-weight="680" text-anchor="middle" dominant-baseline="middle">mart · Dimensional Warehouse</text>
+<rect x="621" y="678" width="618" height="78" rx="16" fill="#151F2B" stroke="#35475B" stroke-width="1.7"/>
+<rect x="621" y="681" width="6" height="72" rx="3" fill="#56D4CB"/>
+<text x="930.0" y="717.0" font-size="28" fill="#F0F6FC" font-weight="680" text-anchor="middle" dominant-baseline="middle">bi · Reporting Views</text>
+<rect x="621" y="802" width="618" height="78" rx="16" fill="#151F2B" stroke="#35475B" stroke-width="1.7"/>
+<rect x="621" y="805" width="6" height="72" rx="3" fill="#B497F0"/>
+<text x="930.0" y="841.0" font-size="28" fill="#F0F6FC" font-weight="680" text-anchor="middle" dominant-baseline="middle">Power Query</text>
+<rect x="550" y="926" width="760" height="96" rx="16" fill="#151F2B" stroke="#35475B" stroke-width="1.7"/>
+<rect x="550" y="929" width="6" height="90" rx="3" fill="#B497F0"/>
+<text x="930.0" y="974.0" font-size="27" fill="#F0F6FC" font-weight="680" text-anchor="middle" dominant-baseline="middle">OLAP · Shared Power BI Semantic Model</text>
+<rect x="45" y="442" width="445" height="88" rx="16" fill="#141D28" stroke="#B497F0" stroke-width="1.65"/>
+<rect x="60" y="461" width="5" height="50" rx="2.5" fill="#B497F0"/>
+<text x="267.5" y="486.0" font-size="25" fill="#F0F6FC" font-weight="660" text-anchor="middle" dominant-baseline="middle">SQL Server Agent · ETL</text>
+<rect x="1380" y="562" width="425" height="94" rx="16" fill="#141D28" stroke="#E8BA60" stroke-width="1.65"/>
+<rect x="1395" y="581" width="5" height="56" rx="2.5" fill="#E8BA60"/>
+<text x="1592.5" y="609.0" font-size="25" fill="#F0F6FC" font-weight="660" text-anchor="middle" dominant-baseline="middle">Validation · Reconciliation</text>
+<rect x="90" y="1140" width="450" height="94" rx="16" fill="#132A42" stroke="#58A6FF" stroke-width="2"/>
+<rect x="110" y="1166" width="6" height="42" rx="3" fill="#58A6FF"/>
+<text x="315" y="1187" font-size="26" fill="#F0F6FC" font-weight="680" text-anchor="middle" dominant-baseline="middle">Executive Overview</text>
+<rect x="705" y="1140" width="450" height="94" rx="16" fill="#142F23" stroke="#3FB950" stroke-width="2"/>
+<rect x="725" y="1166" width="6" height="42" rx="3" fill="#3FB950"/>
+<text x="930" y="1187" font-size="26" fill="#F0F6FC" font-weight="680" text-anchor="middle" dominant-baseline="middle">Inventory &amp; Procurement</text>
+<rect x="1320" y="1140" width="450" height="94" rx="16" fill="#342B19" stroke="#E8BA60" stroke-width="2"/>
+<rect x="1340" y="1166" width="6" height="42" rx="3" fill="#E8BA60"/>
+<text x="1545" y="1187" font-size="26" fill="#F0F6FC" font-weight="680" text-anchor="middle" dominant-baseline="middle">Fulfillment &amp; Logistics</text>
+<rect x="665" y="1354" width="530" height="84" rx="16" fill="#132A42" stroke="#58A6FF" stroke-width="2"/>
+<rect x="689" y="1377" width="6" height="38" rx="3" fill="#58A6FF"/>
+<text x="930" y="1396" font-size="28" fill="#F0F6FC" font-weight="700" text-anchor="middle" dominant-baseline="middle">Power BI Service</text>
+<rect x="1360" y="1352" width="440" height="88" rx="16" fill="#141D28" stroke="#54C4D6" stroke-width="1.65"/>
+<rect x="1375" y="1371" width="5" height="50" rx="2.5" fill="#54C4D6"/>
+<text x="1580.0" y="1396.0" font-size="23" fill="#F0F6FC" font-weight="660" text-anchor="middle" dominant-baseline="middle">On-Premises Data Gateway</text>
+<rect x="682" y="1515" width="496" height="86" rx="16" fill="#1B2133" stroke="#B497F0" stroke-width="2"/>
+<rect x="707" y="1538" width="6" height="40" rx="3" fill="#B497F0"/>
+<text x="930" y="1559" font-size="28" fill="#F0F6FC" font-weight="700" text-anchor="middle" dominant-baseline="middle">Power BI App</text>
+<ellipse cx="930" cy="1716" rx="260" ry="44" fill="#143521" stroke="#3FB950" stroke-width="2.2"/>
+<text x="930" y="1717" font-size="28" fill="#F0F6FC" font-weight="710" text-anchor="middle" dominant-baseline="middle">Business Users</text>
 </svg>
