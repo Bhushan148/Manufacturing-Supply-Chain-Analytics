@@ -73,24 +73,12 @@ The project focuses on the following business requirements:
 
 ---
 
+
 ## Solution Architecture
 
-The solution moves from normalized transactional data into a reporting-ready SQL Server warehouse, then into a shared Power BI semantic model.
+The solution connects synthetic manufacturing transactions to a structured SQL Server warehouse and a shared Power BI semantic model.
 
-```mermaid
-flowchart TD
-    A["Synthetic OLTP Source<br/>13 normalized tables"] --> B["SQL Server: raw<br/>Source-aligned landing"]
-    B --> C["SQL Server: stg<br/>Cleaning and standardization"]
-    C --> D["SQL Server: mart<br/>6 dimensions and 4 facts"]
-    D --> E["SQL Server: bi<br/>Reporting views"]
-    E --> F["Power Query<br/>Query folding and refresh filters"]
-    F --> G["Shared Power BI Semantic Model<br/>Relationships, DAX, RLS"]
-    G --> H["Executive Overview"]
-    G --> I["Inventory & Procurement"]
-    G --> J["Fulfillment & Logistics"]
-    K["SQL Agent + etl controls<br/>Watermarks and ETL execution"] -.-> B
-    K -.-> D
-```
+![Manufacturing and Supply Chain Analytics — Solution Architecture](03_docs/assets/manufacturing-architecture.svg)
 
 ### Responsibilities of Each Layer
 
