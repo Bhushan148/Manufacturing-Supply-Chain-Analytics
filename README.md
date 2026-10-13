@@ -74,11 +74,13 @@ The project focuses on the following business requirements:
 ---
 
 
+
 ## Solution Architecture
 
-The solution connects synthetic manufacturing transactions to a structured SQL Server warehouse and a shared Power BI semantic model.
+The solution moves from synthetic manufacturing data through SQL Server data warehousing and ETL processing into a shared Power BI semantic model, supporting three business-focused reports and Power BI Service delivery.
 
-![Manufacturing and Supply Chain Analytics — Solution Architecture](03_docs/assets/manufacturing-architecture.svg)
+[![Manufacturing and Supply Chain Analytics — Solution Architecture](./03%20docs/assets/manufacturing-architecture.svg)](./03%20docs/assets/manufacturing-architecture.svg)
+
 
 ### Responsibilities of Each Layer
 
